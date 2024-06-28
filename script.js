@@ -62,23 +62,3 @@ do {
         alert('You lost the game bro'); break
     }
 } while (userScore <= 5 || computerScore <= 5);
-
-
-
-//Declare a human score
-    //start it from 0
-//Declare a computer score
-    //start it from 0
-
-//Declare a function playRound
-    //use both variables computerChoice and userChoice 
-        //if userChoice == computerChoice, don't do anything
-        //if userChoice = "rock" and computerChoice = "scissors", increase userScore by 1
-        //if userChoice = "paper" and computerChoice = "rock", increase userScore by 1
-        //if userChoice = "scissors" and computerChoice "paper", increase userScore by 1
-        // for anything else, increase computerScore by 1
-
-//Create a loop that goes until userScore or computerScore = 5
-    //if userScore = 5, print a message to say user won
-    //if computerScore = 5, print a message to say user lost
-    //reset everything to start a new game
