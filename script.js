@@ -102,21 +102,3 @@ function resetGame () {
     
 
 }
-
-
-
-
-/*do {
-    const computerSelection = getComputerChoice();
-    const userSelection = getUserChoice();
-    alert('you choose ' + userSelection + ' and the computer choose '+ computerSelection);
-    playRound(userSelection, computerSelection);
-    alert('now your score is ' + userScore + ' and the computer score is ' + computerScore);
-    console.log('computer score is ' + computerScore);
-    console.log ('user score is ' + userScore);
-    if (userScore == 5) {
-        alert('You won the game bro'); break
-    } else if (computerScore == 5) {
-        alert('You lost the game bro'); break
-    }
-} while (userScore <= 5 || computerScore <= 5);*/
