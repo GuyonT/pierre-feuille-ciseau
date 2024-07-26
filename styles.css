@@ -10,7 +10,7 @@ body {
     padding: 0 10px;
     margin: auto;
     width: 100%;
-    max-width: 450px;
+    max-width: 600px;
 }
 .header-buttons {
     align-self: center;
@@ -44,6 +44,8 @@ ul {
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
 }
+
+/*makes dropdown animated*/
 @keyframes growDown {
     0% {
         transform: scaleY(0)
@@ -56,5 +58,53 @@ ul {
     }}
 
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.choice-button {
+    font-size: 75px;
+    width: 100px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}   
+
+.choice-button:hover {
+    background-color: grey;
+}
+
+.choice-button:active {
+    background-color: grey;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+#container {
+    font-size: large;
+    text-align: center;
+}
+
+#resetContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.buttonYes {
+    font-size: 20px;
+}
 

@@ -33,12 +33,12 @@ const scoreInfo = document.createElement("p"); //declare <p> for scoreInfo
 scoreInfo.classList.add("scoreInfo");
 container.appendChild(scoreInfo);
 
-const buttons = document.querySelectorAll(".choiceButton"); //declartion of buttons
-const choiceButton = document.querySelector(".choiceButton");
+const buttons = document.querySelectorAll(".choice-button"); //declaration of buttons for user input
+const choiceButton = document.querySelector(".choice-button");
 buttons.forEach((button) => {
 	button.addEventListener("click", () => {
 		let computerSelection = getComputerChoice();
-		playRound(button.id, computerSelection);
+		playRound(button.id, computerSelection); //play a round on each click
 		if (userScore == 5) {
 			gameResult.textContent = ('You won the game bro');
 			buttons.forEach((button) => {
@@ -54,16 +54,18 @@ buttons.forEach((button) => {
 		}
 	});
 })
-const scoreInfoContainer = document.querySelector("#scoreInfoContainer");
+
 const gameResult = document.createElement("h4");
 gameResult.classList.add("gameResult");
-scoreInfoContainer.appendChild(gameResult);
+container.appendChild(gameResult);
 
 function resetGame() {
+	const resetContainer = document.querySelector("#resetContainer");
+
 	const resetPrompt = document.createElement("p");
 	resetPrompt.classList.add("resetPrompt");
 	resetPrompt.textContent = ("Do you wanna play again ?");
-	scoreInfoContainer.appendChild(resetPrompt);
+	resetContainer.appendChild(resetPrompt);
     
 	buttons.forEach((button) => {
 		button.addEventListener("click", () => {})
@@ -71,17 +73,20 @@ function resetGame() {
 	const buttonYes = document.createElement("button");
 	buttonYes.classList.add("buttonYes")
 	buttonYes.textContent = ("YES");
-	scoreInfoContainer.appendChild(buttonYes);
+	resetContainer.appendChild(buttonYes);
 
 	buttonYes.onclick = () => {
 		userScore = 0;
 		computerScore = 0;
 		roundResult.textContent = ("");
 		scoreInfo.textContent = ("");
-		scoreInfoContainer.textContent = ("");
+		gameResult.textContent = ("");
+		resetContainer.textContent = ("");
 		buttons.forEach((button) => {
 			button.disabled = false;
 		})
 	}
 }
+
+
 
